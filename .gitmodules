@@ -22,10 +22,6 @@
 	path = vim/bundle/yaml.vim
 	url = git://github.com/vim-scripts/yaml.vim.git
   ignore = untracked
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = git://github.com/ddollar/nerdcommenter.git
-  ignore = untracked
 [submodule "vim/bundle/searchfold"]
 	path = vim/bundle/searchfold
 	url = git://github.com/vim-scripts/searchfold.vim.git
