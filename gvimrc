@@ -3,4 +3,4 @@ set lines=55 columns=150
 
 colorscheme railscasts2
 
-set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+set guifont=Meslo\ LG\ L\ DZ:h14
