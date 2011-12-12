@@ -40,10 +40,6 @@ set noequalalways
 " remap the closing shortcut to something a little easier
 map ZX ZQ
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-
 " Command-T configuration
 let g:CommandTMaxHeight=20
 map <Leader><Leader> :CommandT<CR>
@@ -175,7 +171,3 @@ nmap <S-Space> <C-w>W
 " C based mappings
 map <C-S-f> <Esc>:Ack ""<Left>
 map <D-f> <Esc>:Ack ""<Left>
-
-" Open NERDTree by default
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p

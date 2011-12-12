@@ -42,10 +42,6 @@
 	path = vim/bundle/gundo.vim
 	url = http://github.com/sjl/gundo.vim.git
   ignore = untracked
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
-  ignore = untracked
 [submodule "vim/bundle/vim-irblack"]
 	path = vim/bundle/vim-irblack
 	url = git://github.com/wgibbs/vim-irblack.git
