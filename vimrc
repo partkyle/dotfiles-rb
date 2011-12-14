@@ -44,6 +44,7 @@ map ZX ZQ
 let g:CommandTMaxHeight=20
 map <Leader><Leader> :CommandT<CR>
 map <Leader>. :CommandTBuffer<CR>
+map <Leader>/ :CommandTFlush<CR>
 
 " Remember last location in file
 if has("autocmd")
