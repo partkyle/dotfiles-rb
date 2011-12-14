@@ -37,9 +37,6 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" remap the closing shortcut to something a little easier
-map ZX ZQ
-
 " Command-T configuration
 let g:CommandTMaxHeight=20
 map <Leader><Leader> :CommandT<CR>
