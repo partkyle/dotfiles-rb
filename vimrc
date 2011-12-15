@@ -1,4 +1,5 @@
 call pathogen#infect()
+call pathogen#helptags()
 
 let mapleader=","
 
@@ -37,13 +38,11 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" remap the closing shortcut to something a little easier
-map ZX ZQ
-
 " Command-T configuration
 let g:CommandTMaxHeight=20
 map <Leader><Leader> :CommandT<CR>
 map <Leader>. :CommandTBuffer<CR>
+map <Leader>/ :CommandTFlush<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -70,9 +69,6 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
-
-" twig files are jinja
-au BufRead,BufNewFile *.twig set syntax=jinja
 
 au BufRead,BufNewFile *.txt call s:setupWrapping()
 
@@ -167,7 +163,3 @@ nmap <C-H> <C-w>h
 nmap <C-L> <C-w>l
 nmap <Space> <C-w>w
 nmap <S-Space> <C-w>W
-
-" C based mappings
-map <C-S-f> <Esc>:Ack ""<Left>
-map <D-f> <Esc>:Ack ""<Left>
