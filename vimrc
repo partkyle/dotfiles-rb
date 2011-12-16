@@ -98,9 +98,13 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 " Bubble single lines
 nmap <C-Up> [e
 nmap <C-Down> ]e
+nmap <C-k> [e
+nmap <C-j> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+vmap <C-k> [egv
+vmap <C-j> ]egv
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
@@ -151,6 +155,12 @@ if has("mouse")
   set ttymouse=xterm2
 endif
 
+
+if has("gui_running")
+  " Automatically resize splits when resizing MacVim window
+  autocmd VimResized * wincmd =
+endif
+
 " This is totally awesome - remap jj to escape in insert mode.  You'll never
 " type jj anyway, so it's great!
 inoremap jj <Esc>
@@ -160,10 +170,6 @@ nmap <leader>f :Ack ""<Left>
 nmap <leader>gs :Gstatus<CR><C-w>J
 nmap <leader>gd :Gdiff<CR>
 
-" Better mappings split movement
-nmap <C-J> <C-w>j
-nmap <C-K> <C-w>k
-nmap <C-H> <C-w>h
-nmap <C-L> <C-w>l
+" Better split movement
 nmap <Space> <C-w>w
 nmap <S-Space> <C-w>W
