@@ -173,3 +173,7 @@ nmap <leader>gd :Gdiff<CR>
 " Better split movement
 nmap <Space> <C-w>w
 nmap <S-Space> <C-w>W
+
+" run commands
+nmap <leader>rr :!ruby %<CR>
+nmap <leader>rp :!python %<CR>
