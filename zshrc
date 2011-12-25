@@ -24,15 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # This section is OS specific (I don't want to load ssh-agent on OS X)
-platform="unknown"
-unamestr=`uname`
-if [[ "$unamestr" = "Linux" ]]; then
-  plugins=(git)
-elif [[ "$unamestr" = "Darwin" ]]; then
-  plugins=(git brew npm rvm)
-else
-  plugins=(git)
-fi
+plugins=(git brew npm rbates)
 
 source $ZSH/oh-my-zsh.sh
 
