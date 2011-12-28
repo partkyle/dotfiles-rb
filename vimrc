@@ -106,6 +106,10 @@ vmap <C-Down> ]egv
 vmap <C-k> [egv
 vmap <C-j> ]egv
 
+" better moving in insert mode
+imap <C-j> <Esc>ji
+imap <C-k> <Esc>ki
+
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
