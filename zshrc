@@ -23,8 +23,7 @@ DISABLE_AUTO_UPDATE="true"
 # COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# This section is OS specific (I don't want to load ssh-agent on OS X)
-plugins=(git brew npm rbates)
+plugins=(git brew rbates kthxbai)
 
 source $ZSH/oh-my-zsh.sh
 
