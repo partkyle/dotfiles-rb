@@ -133,12 +133,13 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 " Directory for undo tracking
-if has("undodir")
+try
   set undodir=~/.vim/undo
   set undofile
   set undolevels=1000  "maximum number of changes that can be undone
   set undoreload=10000 "maximum number lines to save for undo on a buffer reload
-end
+catch
+endtry
 
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
