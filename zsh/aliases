@@ -2,7 +2,7 @@
 alias ..='cd ..'
 
 # ls
-alias ls="ls -F"
+ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty -F' || alias ls='ls -FG'
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
