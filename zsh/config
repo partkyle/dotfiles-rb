@@ -37,6 +37,7 @@ setopt HIST_REDUCE_BLANKS
 zle -N newtab
 
 # key bindings
+bindkey -e
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
@@ -50,3 +51,4 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
+bindkey ' ' magic-space    # also do history expansion on space
