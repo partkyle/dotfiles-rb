@@ -1,7 +1,9 @@
+setopt prompt_subst
+
 if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
+  export PS1='%{$fg[green]%}%m:%{$fg[magenta]%}%3~%{$fg[cyan]%}$(git_info_for_prompt)%{$reset_color%}%# '
 else
-  export PS1='%3~$(git_info_for_prompt)%# '
+  export PS1='%{$fg[magenta]%}%3~%{$fg[cyan]%}$(git_info_for_prompt)%{$reset_color%}%# '
 fi
 
 export EDITOR='vim'
