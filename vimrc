@@ -42,6 +42,9 @@ set noequalalways
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
+" Automatically read changed files
+set autoread
+
 " Command-T configuration
 let g:CommandTMaxHeight=20
 map <Leader><Leader> :CommandT<CR>
