@@ -160,6 +160,11 @@ runtime! macros/matchit.vim
 " Show (partial) command in the status line
 set showcmd
 
+if has("mouse")
+  set mouse=a
+  set ttymouse=xterm2
+endif
+
 if has("gui_running")
   " Automatically resize splits when resizing MacVim window
   autocmd VimResized * wincmd =
