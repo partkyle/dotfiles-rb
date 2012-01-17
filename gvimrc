@@ -10,3 +10,6 @@ elseif has("gui_macvim")
 elseif has("gui_win32")
   set guifont=Consolas:h11
 end
+
+" default the selectmode to nothing (Visual)
+set selectmode=""
