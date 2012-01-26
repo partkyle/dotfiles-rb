@@ -174,6 +174,9 @@ endif
 " type jj anyway, so it's great!
 inoremap jj <Esc>
 
+" remap the quit command
+nmap QQ ZQ
+
 " My custom commands
 nmap <leader>f :Ack ""<Left>
 nmap <leader>gs :Gstatus<CR><C-w>J
