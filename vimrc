@@ -129,7 +129,9 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color jellybeans+
+set bg=light
+let g:solarized_diffmode="high"
+color solarized
 
 " Directories for swp files
 set backupdir=~/.vim/backup
