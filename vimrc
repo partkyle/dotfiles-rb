@@ -42,12 +42,10 @@ set noequalalways
 set autoread
 
 " Command-T configuration
-let g:CommandTMaxHeight=20
 let g:CommandTCancelMap=['<Esc>', '<C-c>']
 map <Leader><Leader> :CommandT<CR>
 map <Leader>. :CommandTBuffer<CR>
 map <Leader>/ :CommandTFlush<CR>:CommandT<CR>
-
 
 " Remember last location in file
 if has("autocmd")
