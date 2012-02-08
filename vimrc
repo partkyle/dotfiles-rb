@@ -3,6 +3,9 @@ call pathogen#helptags()
 
 let mapleader=","
 
+" fix the escape issue
+map <c-[> <Esc>
+
 set nocompatible
 
 set number
