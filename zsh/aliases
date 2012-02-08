@@ -1,6 +1,8 @@
 # cd
 alias ..='cd ..'
 
+alias :q='exit'
+
 # ls
 ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty -F' || alias ls='ls -FG'
 alias l="ls -lAh"
