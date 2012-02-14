@@ -33,19 +33,14 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 " Status bar
 set laststatus=2
 
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
-
 " Automatically read changed files
 set autoread
 
-" Command-T configuration
-let g:CommandTCancelMap=['<Esc>', '<C-c>']
-map <Leader><Leader> :CommandT<CR>
-map <Leader>. :CommandTBuffer<CR>
-map <Leader>/ :CommandTFlush<CR>:CommandT<CR>
+" CtrlP configuration
+let g:ctrlp_match_window_reversed = 0
+map <Leader><Leader> :CtrlPCurFile<CR>
+map <Leader>. :CtrlPMRUFiles<CR>
+map <Leader>/ :CtrlPRoot<CR>
 
 " Remember last location in file
 if has("autocmd")
