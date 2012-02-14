@@ -32,11 +32,6 @@ task :install do
   end
 end
 
-task :update do |variable|
-  system %Q{git submodule update --init}
-  system %Q{cd vim/bundle/Command-T/ruby/command-t; ruby extconf.rb; make}
-end
-
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file.sub('.erb', '')}"}
   link_file(file)
