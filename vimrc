@@ -94,6 +94,7 @@ nmap <C-Up> [e
 nmap <C-Down> ]e
 nmap <C-k> [e
 nmap <C-j> ]e
+
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
@@ -160,6 +161,9 @@ if has("gui_running")
   " Automatically resize splits when resizing MacVim window
   autocmd VimResized * wincmd =
 endif
+
+" I can't believe that :W does nothing
+com! W :w
 
 " This is totally awesome - remap jj to escape in insert mode.  You'll never
 " type jj anyway, so it's great!
