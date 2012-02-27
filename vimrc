@@ -162,6 +162,7 @@ endif
 
 " I can't believe that :W does nothing
 com! W :w
+com! Q :q
 
 " This is totally awesome - remap jj to escape in insert mode.  You'll never
 " type jj anyway, so it's great!
