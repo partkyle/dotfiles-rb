@@ -36,5 +36,8 @@ alias rst='touch tmp/restart.txt'
 # bundler
 alias be='bundle exec'
 
+# todo.sh
+alias t='todo'
+
 # commands starting with % for pasting from web
 alias %=' '
