@@ -1,6 +1,7 @@
 # cd
 alias ..='cd ..'
 
+# vim quitting
 alias :q='exit'
 
 # ls
