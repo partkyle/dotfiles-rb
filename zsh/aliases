@@ -39,5 +39,10 @@ alias be='bundle exec'
 # todo.sh
 alias t='todo.sh'
 
+# noglob fixes
+alias grep='noglob grep'
+alias echo='noglob echo'
+alias find='noglob find'
+
 # commands starting with % for pasting from web
 alias %=' '
