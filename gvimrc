@@ -1,6 +1,6 @@
 set guioptions-=T " hide toolbar
 
-colorscheme railscasts+
+colorscheme Tomorrow-Night
 
 " set font based on OS
 if has("gui_gtk2")
