@@ -1,4 +1,4 @@
-# Copyright 2011 Wincent Colaiuta. All rights reserved.
+# Copyright 2010-2011 Wincent Colaiuta. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -21,34 +21,34 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'command-t/vim'
-require 'command-t/vim/path_utilities'
-require 'command-t/scanner'
+require 'spec_helper'
+require 'ostruct'
+require 'command-t/scanner/buffer_scanner'
 
-module CommandT
-  # Returns a list of files in the jumplist.
-  class JumpScanner < Scanner
-    include VIM::PathUtilities
+module VIM
+  class Buffer; end
+end
 
-    def paths
-      jumps_with_filename = jumps.lines.select do |line|
-        line_contains_filename?(line)
-      end
-      filenames = jumps_with_filename[1..-2].map do |line|
-        relative_path_under_working_directory line.split[3]
-      end
+describe CommandT::BufferScanner do
+  def buffer name
+    b = OpenStruct.new
+    b.name = name
+    b
+  end
 
-      filenames.sort.uniq
+  before do
+    @paths = %w(bar/abc bar/xyz baz bing foo/alpha/t1 foo/alpha/t2 foo/beta)
+    @scanner = CommandT::BufferScanner.new
+    stub(@scanner).relative_path_under_working_directory(is_a(String)) { |arg| arg }
+    stub(::VIM::Buffer).count { 7 }
+    (0..6).each do |n|
+      stub(::VIM::Buffer)[n].returns(buffer @paths[n])
     end
+  end
 
-  private
-
-    def line_contains_filename? line
-      line.split.count > 3
+  describe 'paths method' do
+    it 'returns a list of regular files' do
+      @scanner.paths.should =~ @paths
     end
-
-    def jumps
-      VIM::capture 'silent jumps'
-    end
-  end # class JumpScanner
-end # module CommandT
+  end
+end
