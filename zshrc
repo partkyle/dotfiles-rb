@@ -33,7 +33,7 @@ plugins=(git partkyle rbenv)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$HOME/.rbenv/bin"
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Customize to your needs...
