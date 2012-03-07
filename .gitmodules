@@ -13,6 +13,8 @@
 [submodule "vim/bundle/Vim-Tomorrow-Theme"]
 	path = vim/bundle/Vim-Tomorrow-Theme
 	url = https://github.com/chriskempson/Vim-Tomorrow-Theme.git
+  ignore = untracked
 [submodule "vim/bundle/ZoomWin"]
 	path = vim/bundle/ZoomWin
 	url = git://github.com/vim-scripts/ZoomWin.git
+  ignore = untracked
