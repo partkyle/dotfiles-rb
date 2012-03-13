@@ -1,13 +1,10 @@
 setopt prompt_subst
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%{$fg[blue]%}%m:%{$fg[green]%}%3~%{$fg[cyan]%}$(git_info_for_prompt)%{$reset_color%}%# '
-else
-  export PS1='%{$fg[green]%}%3~%{$fg[cyan]%}$(git_info_for_prompt)%{$reset_color%}%# '
-fi
+export PROMPT=' $(prompt_color_ssh)%% %{$reset_color%}'
+export RPROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$fg[yellow]%}$(git_info_for_prompt) $(prompt_color_ssh)%m%{$reset_color%}'
 
 export EDITOR='vim'
-export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)
@@ -49,7 +46,7 @@ bindkey '^[[5D' beginning-of-line
 bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char 
+bindkey '^?' backward-delete-char
 bindkey '^r' history-incremental-search-backward
 
 # make search up and down work, so partially type and hit up/down to find relevant stuff
