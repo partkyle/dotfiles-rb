@@ -1,0 +1,5 @@
+if [[ "$4" != "" ]]; then
+  git $1 $2 $3 git@github.com:$3/$4.git
+else
+  git $1 $2 $3
+fi
