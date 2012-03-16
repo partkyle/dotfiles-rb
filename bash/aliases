@@ -1,3 +1,5 @@
+. ~/.shells/aliases
+
 # changing directory to code project
 function c { cd ~/code/$1; }
 
@@ -10,4 +12,4 @@ function railsapp {
 }
 
 # misc
-alias reload='. ~/.bash_profile'
+alias reload!='. ~/.bash_profile'
