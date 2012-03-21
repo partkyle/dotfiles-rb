@@ -1,0 +1,7 @@
+# rvm
+[[ -z "$RVM_HOME" ]] && export RVM_HOME="$HOME/.rvm"
+PATH=$PATH:$RVM_HOME/bin # Add RVM to PATH for scripting
+[[ -s "$RVM_HOME/scripts/rvm" ]] && source "$RVM_HOME/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# vim settings
+# filetype: zsh
