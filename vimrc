@@ -62,8 +62,6 @@ function s:setupMarkup()
   map <buffer> <Leader>p :Hammer<CR>
 endfunction
 
-colorscheme Tomorrow-Night
-
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 
