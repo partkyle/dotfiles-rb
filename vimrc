@@ -38,7 +38,9 @@ set laststatus=2
 set autoread
 
 " Command-T configuration
-let g:CommandTCancelMap=['<Esc>', '<C-c>']
+if version > 730
+  let g:CommandTCancelMap=['<Esc>', '<C-c>']
+end
 let g:CommandTMaxHeight=10
 let g:CommandTMinHeight=10
 map <Leader><Leader> :CommandT<CR>
