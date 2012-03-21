@@ -47,6 +47,22 @@ map <Leader><Leader> :CommandT<CR>
 map <Leader>. :CommandTBuffer<CR>
 map <Leader>/ :CommandTFlush<CR>:CommandT<CR>
 
+" if the terminal is in solarized mode
+if $COLORSCHEME == 'solarized'
+  " default to solarized light
+  if $SOLARIZED_LIGHT
+    set bg=light
+  else
+    set bg=dark
+  end
+  " add a toggle function
+  call togglebg#map("<F5>")
+  " set the special diffmode
+  let g:solarized_diffmode="high"
+  " set the colorscheme
+  colorscheme solarized
+end
+
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
