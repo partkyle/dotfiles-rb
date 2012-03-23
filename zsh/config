@@ -4,7 +4,7 @@ export PROMPT=' $(prompt_color_ssh)%% %{$reset_color%}'
 export RPROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$fg[yellow]%}$(git_info_for_prompt) %{$reset_color%}$(prompt_color_ssh)%m%{$reset_color%}'
 
 export EDITOR='vim'
-export PATH="$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)
