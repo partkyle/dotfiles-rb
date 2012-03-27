@@ -184,8 +184,10 @@ endif
 " custom key mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " I can't believe that :W does nothing
-com! W :w
-com! Q :q
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
 " jj to escape in insert mode.
 inoremap jj <Esc>
 " remap the quit command
