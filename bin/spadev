@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'sinatra'
+require 'sprockets'
+require 'less'
+require 'coffee-script'
+
+sprockets = Sprockets::Environment.new
+sprockets.append_path 'javascripts'
+sprockets.append_path 'stylesheets'
+
+get '/javascripts/:file' do
+  response.headers['Content-Type'] = 'application/x-javascript'
+  asset = sprockets.find_asset params[:file]
+  asset.to_s
+end
+
+get '/stylesheets/:file' do
+  response.headers['Content-Type'] = 'text/css'
+  asset = sprockets.find_asset params[:file]
+  asset.to_s
+end
+
+get '/' do
+  File.read 'index.html'
+end
+
+get '/:file' do
+  File.read params[:file] if File.exists?(params[:file])
+end
+
