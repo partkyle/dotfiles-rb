@@ -40,6 +40,8 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 " Automatically read changed files
 set autoread
+" unix filetypes
+set ff=unix
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " if the terminal is in solarized mode
