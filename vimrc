@@ -66,7 +66,7 @@ end
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
+        \| exe "normal g'\"" | endif
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -263,3 +263,8 @@ if has("gui_running")
   autocmd VimResized * wincmd =
 endif
 
+" python only setup
+if !exists("autocommands_loaded")
+  let autocommands_loaded = 1
+  autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vim/lang/python
+endif
