@@ -1,6 +1,6 @@
 setopt prompt_subst
 
-export PROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}$(git_info_for_prompt)$(prompt_color_ssh)%#%{$reset_color%} '
+export PROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}$(git_info_for_prompt)%{$reset_color%}$(prompt_color_ssh) %#%{$reset_color%} '
 export RPROMPT='$(prompt_color_ssh){%m}%{$reset_color%}'
 
 export EDITOR='vim'
