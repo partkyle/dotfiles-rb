@@ -1,13 +1,7 @@
 setopt prompt_subst
 
-# export PROMPT=' $(prompt_color_ssh)%% %{$reset_color%}'
-# export RPROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$fg[yellow]%}$(git_info_for_prompt) %{$reset_color%}$(prompt_color_ssh)%m%{$reset_color%}'
-
-if [[ -n $SSH_CONNECTION ]]; then
-  export PS1='%m:%3~$(git_info_for_prompt)%# '
-else
-  export PS1='%3~$(git_info_for_prompt)%# '
-fi
+export PROMPT=' $(prompt_color_ssh)%% %{$reset_color%}'
+export RPROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$fg[yellow]%}$(git_info_for_prompt) %{$reset_color%}$(prompt_color_ssh)%m%{$reset_color%}'
 
 export EDITOR='vim'
 export PATH="bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
