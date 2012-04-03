@@ -42,3 +42,6 @@
 	path = vim/bundle/vim-tomorrow-theme
 	url = https://github.com/chriskempson/vim-tomorrow-theme.git
   ignore = untracked
+[submodule "vim/bundle/tomdoc.vim"]
+	path = vim/bundle/tomdoc.vim
+	url = https://github.com/duwanis/tomdoc.vim.git
