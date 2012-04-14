@@ -45,3 +45,8 @@
 [submodule "vim/bundle/vimux"]
 	path = vim/bundle/vimux
 	url = https://github.com/benmills/vimux.git
+  ignore = untracked
+[submodule "vim/bundle/tomdoc.vim"]
+	path = vim/bundle/tomdoc.vim
+	url = https://github.com/duwanis/tomdoc.vim.git
+  ignore = untracked
