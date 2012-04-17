@@ -13,7 +13,7 @@ autoload -U ~/.zsh/functions/*(:t)
 
 # History config
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
+HISTSIZE=1000
 SAVEHIST=10000
 
 # print elapsed time when more than 10 seconds
