@@ -2,7 +2,10 @@
 map <Leader>rr :call RunVimTmuxCommand("clear; ruby " . bufname("%"))<CR>
 
 " Run the current file with python
-map <Leader>rp :call RunVimTmuxCommand("clear; python" . bufname("%"))<CR>
+" map <Leader>rp :call RunVimTmuxCommand("clear; python " . bufname("%"))<CR>
+
+" Run the current file with node
+map <Leader>rn :call RunVimTmuxCommand("clear; node " . bufname("%"))<CR>
 
 " Run the current file with rspec
 map <Leader>rb :call RunVimTmuxCommand("clear; rspec " . bufname("%"))<CR>

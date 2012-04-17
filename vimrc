@@ -211,41 +211,6 @@ map <Leader>. :CommandTBuffer<CR>
 map <Leader>/ :CommandTFlush<CR>:CommandT<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ruby specific CommandT settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gr :topleft :split config/routes.rb<cr>
-function! ShowRoutes()
-  " Requires 'scratch' plugin
-  :topleft 100 :split __Routes__
-  " Make sure Vim doesn't write __Routes__ as a file
-  :set buftype=nofile
-  " Delete everything
-  :normal 1GdG
-  " Put routes output in buffer
-  :0r! rake -s routes
-  " Size window to number of lines (1 plus rake output length)
-  :exec ":normal " . line("$") . _ "
-  " Move cursor to bottom
-  :normal 1GG
-  " Delete empty trailing line
-  :normal dd
-endfunction
-
-map <leader>rr :call ShowRoutes()<cr>
-map <leader>rv :CommandT app/views<cr>
-map <leader>rc :CommandT app/controllers<cr>
-map <leader>rm :CommandT app/models<cr>
-map <leader>rh :CommandT app/helpers<cr>
-map <leader>rj :CommandT app/assets/javascripts<cr>
-map <leader>rs :CommandT app/assets/stylesheets<cr>
-map <leader>rl :CommandT lib<cr>
-map <leader>rp :CommandT public<cr>
-map <leader>rf :CommandT features<cr>
-map <leader>rt :CommandT spec<cr>
-map <leader>rg :topleft 100 :split Gemfile<cr>
-map <leader>rt :CommandTTag<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let macvim_hig_shift_movement = 1
