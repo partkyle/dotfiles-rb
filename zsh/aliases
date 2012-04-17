@@ -1,9 +1,10 @@
 . ~/.shells/aliases
 
 # noglob fixes
-alias grep='noglob grep'
+alias curl='noglob curl'
 alias echo='noglob echo'
 alias find='noglob find'
+alias grep='noglob grep'
 
 # commands starting with % for pasting from web
 alias %=' '
