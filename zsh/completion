@@ -1,5 +1,7 @@
-autoload -U compinit
+autoload -Uz compinit
 compinit
+
+zstyle ':completion:*' completer _expand _complete _correct _approximate
 
 # colors
 zstyle ':completion:*' list-colors ''
