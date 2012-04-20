@@ -46,20 +46,12 @@ set ff=unix
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " if the terminal is in solarized mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if $COLORSCHEME == 'solarized'
-  " default to solarized light
-  if $SOLARIZED_LIGHT == 'true'
-    set bg=light
-  else
-    set bg=dark
-  end
-  " add a toggle function
-  call togglebg#map("<F5>")
-  " set the special diffmode
-  let g:solarized_diffmode="high"
-  " set the colorscheme
-  colorscheme solarized
-end
+" default to solarized light
+set bg=light
+" set the special diffmode
+let g:solarized_diffmode="high"
+" set the colorscheme
+colorscheme solarized
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remember last location in file
