@@ -10,7 +10,7 @@ fi
 
 export PROMPT=' $PCOLOR%% $RESET'
 # this needs to be single quotes or it will evaluate the git_info_for_prompt call
-export RPROMPT='$PR_BOLD_BLUE${PWD/#$HOME/~}$PR_BOLD_YELLOW$(git_info_for_prompt) $PCOLOR%m$RESET'
+export RPROMPT='$PR_BOLD_BLUE${PWD/#$HOME/~}$PR_BOLD_YELLOW$(git_info_for_prompt) $RESET$PCOLOR%m$RESET'
 
 export EDITOR='vim'
 export PATH="bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
