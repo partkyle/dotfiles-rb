@@ -3,7 +3,7 @@ setopt prompt_subst
 if [[ "$HOST" =~ 'kyle-sg.*' ]]; then
   PCOLOR="$PR_GREEN"
 elif [[ "$HOST" == 'sendgrid' ]]; then
-  PCOLOR="$PR_MAGENTA"
+  PCOLOR="$PR_BOLD_MAGENTA"
 else
   PCOLOR="$PR_WHITE"
 fi
