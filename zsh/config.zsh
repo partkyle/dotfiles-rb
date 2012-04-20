@@ -1,7 +1,16 @@
 setopt prompt_subst
 
-export PROMPT=' $(prompt_color_ssh)%% %{$reset_color%}'
-export RPROMPT='%{$fg_bold[blue]%}${PWD/#$HOME/~}%{$fg[yellow]%}$(git_info_for_prompt) %{$reset_color%}$(prompt_color_ssh)%m%{$reset_color%}'
+if [[ "$HOST" =~ 'kyle-sg.*' ]]; then
+  PCOLOR="$PR_GREEN"
+elif [[ "$HOST" == 'sendgrid' ]]; then
+  PCOLOR="$PR_MAGENTA"
+else
+  PCOLOR="$PR_WHITE"
+fi
+
+export PROMPT=' $PCOLOR%% $RESET'
+# this needs to be single quotes or it will evaluate the git_info_for_prompt call
+export RPROMPT='$PR_BOLD_BLUE${PWD/#$HOME/~}$PR_BOLD_YELLOW$(git_info_for_prompt) $PCOLOR%m$RESET'
 
 export EDITOR='vim'
 export PATH="bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"

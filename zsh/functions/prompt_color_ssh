@@ -1,7 +1,0 @@
-if [[ "$HOST" =~ 'kyle-sg.*' ]]; then
-  echo "%{$fg[green]%}"
-elif [[ "$HOST" == 'sendgrid' ]]; then
-  echo "%{$fg_bold[magenta]%}"
-else
-  echo "%{$fg[white]%}"
-fi
