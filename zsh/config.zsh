@@ -13,7 +13,7 @@ export PROMPT=' $PCOLOR%% $RESET'
 export RPROMPT='$PR_BOLD_BLUE${PWD/#$HOME/~}$PR_BOLD_YELLOW$(git_info_for_prompt) $RESET$PCOLOR%m$RESET'
 
 export EDITOR='vim'
-export PATH="bin:$HOME/bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="bin:$HOME/.bin:/usr/local/bin:/usr/local/sbin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)
