@@ -5,7 +5,7 @@ if [[ "$HOST" =~ 'kyle-sg.*' ]]; then
 elif [[ "$HOST" == 'sendgrid' ]]; then
   PCOLOR="$PR_BOLD_MAGENTA"
 else
-  PCOLOR="$PR_WHITE"
+  PCOLOR="$PR_BLUE"
 fi
 
 export PROMPT=' $PCOLOR%% $RESET'
