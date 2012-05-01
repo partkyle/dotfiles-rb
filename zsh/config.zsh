@@ -69,10 +69,6 @@ bindkey '^[[B' down-line-or-search
 
 bindkey ' ' magic-space    # also do history expansion on space
 
-# LS_COLORS
-autoload colors; colors;
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
-
 # grep colors
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
