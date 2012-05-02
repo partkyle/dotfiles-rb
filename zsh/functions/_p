@@ -1,0 +1,3 @@
+#compdef p
+local project_dir=`cat $HOME/.project_dir`
+_files -W $project_dir -/
