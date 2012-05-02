@@ -1,0 +1,6 @@
+if [ -e "$HOME/.project_dir" ]; then
+  local project_dir=`cat $HOME/.project_dir`
+  cd $project_dir/$1;
+else
+  echo "name the directory in $HOME/.project_dir to use this function"
+fi
