@@ -30,8 +30,6 @@ set backspace=indent,eol,start
 set laststatus=2
 " Searching
 set hlsearch
-" Clear the search buffer when hitting return
-nnoremap <CR> :nohlsearch<cr>
 set incsearch
 set ignorecase
 set smartcase
