@@ -54,3 +54,9 @@
 	path = vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
 	ignore = untracked
+[submodule "emacs.d/el-get/el-get"]
+	path = emacs.d/el-get/el-get
+	url = git@github.com:dimitri/el-get.git
+[submodule "emacs.d/themes/emacs-color-theme-solarized"]
+	path = emacs.d/themes/emacs-color-theme-solarized
+	url = git@github.com:sellout/emacs-color-theme-solarized.git
