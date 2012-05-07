@@ -8,6 +8,7 @@ alias :q='exit'
 
 # ls
 ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
+gls --color -d . &>/dev/null 2>&1 && alias ls="gls --color=auto"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
