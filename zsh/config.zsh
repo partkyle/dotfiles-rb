@@ -8,6 +8,8 @@ else
   PCOLOR="$PR_BLUE"
 fi
 
+eval `dircolors $HOME/.dir_colors >/dev/null 2>&1`
+
 export PROMPT=' $PCOLOR%% $RESET'
 # this needs to be single quotes or it will evaluate the git_info_for_prompt call
 export RPROMPT='$PR_BOLD_BLUE${PWD/#$HOME/~}$PR_BOLD_YELLOW$(git_info_for_prompt) $RESET$PCOLOR%m$RESET'
